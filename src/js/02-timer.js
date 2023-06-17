@@ -48,7 +48,7 @@ function dataCheck(selectedDates) {
 function timerStart() {
     intervalId = setInterval(() => {
         
-        currentDate = newDate().getTime();
+        currentDate = new Date().getTime();
         if ((selectedDate - currentDate) <= 1000) {
             clearInterval(intervalId);  
             refs.startBtn.disabled = true;
